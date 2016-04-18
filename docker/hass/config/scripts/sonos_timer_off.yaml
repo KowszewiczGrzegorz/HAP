@@ -1,0 +1,8 @@
+alias: "Turn off Sonos after 5 minutes"
+sequence:
+  - delay:
+      minutes: 5
+  - service: media_play.media_pause
+    data:
+      entity_id: media_player.bathroom
+

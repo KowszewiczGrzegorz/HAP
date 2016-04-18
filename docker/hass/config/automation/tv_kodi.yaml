@@ -1,0 +1,7 @@
+alias: Kodi
+trigger:
+  platform: state
+  entity_id: switch.TV
+  to: 'on'
+action:
+  service: shell_command.start_kodi

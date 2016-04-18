@@ -1,0 +1,7 @@
+alias: "Music turned on"
+trigger:
+  platform: state 
+  entity_id: switch.Tuner
+  state: "on"
+action:
+  service: shell_command.start_music

@@ -1,0 +1,13 @@
+alias: "Turn on lamp and set timer"
+sequence:
+  # Cancel ev. old timers
+  - service: script.turn_off
+    data:
+      entity_id: script.sonos_timer_off
+  - service: media_player.media_play
+    data:
+      entity_id: media_player.bathroom
+    # Set new timer
+  - service: script.turn_on
+    data:
+      entity_id: script.sonos_timer_off

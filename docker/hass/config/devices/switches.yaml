@@ -1,0 +1,84 @@
+- platform: mqtt
+  name: "Gate"
+  state_topic: "/smartthings/Gate/switch"
+  command_topic: "/smartthings/Gate/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Listen To Living Room Sonos [Harmony Activity]"
+  state_topic: "/smartthings/Listen To Living Room Sonos [Harmony Activity]/switch"
+  command_topic: "/smartthings/Listen To Living Room Sonos [Harmony Activity]/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Listen to Music [Harmony Activity]"
+  state_topic: "/smartthings/Listen to Music [Harmony Activity]/switch"
+  command_topic: "/smartthings/Listen to Music [Harmony Activity]/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Music"
+  state_topic: "/smartthings/Music/switch"
+  command_topic: "/smartthings/Music/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Outdoor Music"
+  state_topic: "/smartthings/Outdoor Music/switch"
+  command_topic: "/smartthings/Outdoor Music/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Pool"
+  state_topic: "/smartthings/Pool/switch"
+  command_topic: "/smartthings/Pool/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Swiatla [Harmony Activity]"
+  state_topic: "/smartthings/Swiatla [Harmony Activity]/switch"
+  command_topic: "/smartthings/Swiatla [Harmony Activity]/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Switch Sonos"
+  state_topic: "/smartthings/Switch Sonos/switch"
+  command_topic: "/smartthings/Switch Sonos/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Tuner"
+  state_topic: "/smartthings/Tuner/switch"
+  command_topic: "/smartthings/Tuner/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "TV presence"
+  state_topic: "/smartthings/TV presence/switch"
+  command_topic: "/smartthings/TV presence/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "TV"
+  state_topic: "/smartthings/TV/switch"
+  command_topic: "/smartthings/TV/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Water"
+  state_topic: "/smartthings/Water/switch"
+  command_topic: "/smartthings/Water/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"

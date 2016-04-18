@@ -1,0 +1,8 @@
+alias: 'Music Bathroom'
+trigger:
+  platform: state
+  entity_id: binary_sensor.motion__bathroom
+  to: 'on'
+action:
+  service: homeassistant.turn_on
+  entity_id: script.sonos_timed

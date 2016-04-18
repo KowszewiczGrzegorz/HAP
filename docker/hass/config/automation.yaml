@@ -1,0 +1,71 @@
+#- !include automation/bedroom.yaml
+- !include automation/water.yaml
+- !include automation/music_on.yaml
+- !include automation/music_off.yaml
+- !include automation/gate.yaml
+- !include automation/music_bathroom.yaml
+- !include automation/tv_kodi.yaml
+
+- alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.notify
+    data:
+      message: 'Update for Home Assistant is available.'
+#- alias: "Gate notification - closed"
+#  trigger:
+#    platform: state
+#    entity_id: binary_sensor.contact__gate
+#    state: "off"
+#  action:
+#    service: notify.pushbullet
+#    data:
+#      message: Gate is Closed
+
+#  - alias: "Gate notification - opened"
+#    trigger:
+#      platform: mqtt
+#      topic: "/smartthings/Gate/contact"
+#      payload: "open"
+#    action:
+#      service: notify.pushbullet
+#      data:
+#        message: Gate is opened
+- alias: "Gate notification Photo - opened"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.contact__gate
+    state: "on"
+  action:
+    service: shell_command.take_photo_gate
+    data:
+      message: Gate is opened
+- alias: "Gate notification Photo - closed"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.contact__gate
+    state: "off"
+  action:
+    service: shell_command.take_photo_gate
+    data:
+      message: Gate is closed
+- alias: "Porch motion"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion__porch
+    state: "on"
+  action:
+    service: shell_command.take_photo_door
+    data:
+      message: Motion at the porch
+#  - alias: "Automatycznie wylacz po 15 sekundach"
+#    trigger:
+#      platform: mqtt
+#      topic: "/smartthings/zzzFamily Room/switch"
+#      payload: "off"
+#    action:
+#      service: notify.pushbullet
+#      data:
+#        message: Pushbullet family room - wylaczone

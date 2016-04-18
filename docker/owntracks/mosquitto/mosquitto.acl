@@ -1,0 +1,23 @@
+# This affects access control for clients with no username.
+topic read $SYS/#
+
+#user jane
+#topic owntracks/jjolie/phone
+
+user grzegorz
+topic read owntracks/#
+
+user kornelka
+topic read owntracks/#
+
+user smartthings
+topic readwrite /smartthings/#
+topic readwrite owntracks/#
+topic readwrite /owntracks/#
+
+# This affects all clients.
+pattern write $SYS/broker/connection/%c/state
+pattern write owntracks/%u/#
+pattern readwrite owntracks/%u/#
+pattern readwrite owntracks/#
+pattern write /smartthings/#

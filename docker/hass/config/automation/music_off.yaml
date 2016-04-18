@@ -1,0 +1,8 @@
+alias: "Music turned off"
+trigger:
+  platform: state
+  entity_id: switch.Tuner
+  state: "off"
+action:
+  service: shell_command.stop_music
+

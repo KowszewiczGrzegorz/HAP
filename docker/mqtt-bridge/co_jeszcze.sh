@@ -1,0 +1,1 @@
+cat events.log | grep -iv battery | grep -iv subscribing | grep -iv power | grep -iv energy | grep -iv switch | grep -iv motion | grep -iv saving | grep -iv contact | grep -iv level | grep -iv lock | grep -iv presence | grep -iv button | grep -iv acceleration

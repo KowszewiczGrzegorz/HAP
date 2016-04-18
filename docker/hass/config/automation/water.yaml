@@ -1,0 +1,8 @@
+alias: Water
+trigger:
+  platform: state
+  entity_id: switch.Water
+  to: 'on'
+action:
+  service: homeassistant.turn_on
+  entity_id: script.water_timer

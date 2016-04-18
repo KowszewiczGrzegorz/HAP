@@ -1,0 +1,8 @@
+alias: Gate
+trigger:
+  platform: state
+  entity_id: switch.Gate
+  to: 'on'
+action:
+  service: homeassistant.turn_on
+  entity_id: script.gate_timer

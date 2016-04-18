@@ -1,0 +1,6 @@
+sequence:
+- delay:
+    minutes: 2
+- service: homeassistant.turn_off
+  data:
+    entity_id: switch.water

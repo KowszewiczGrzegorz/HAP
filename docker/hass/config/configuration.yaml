@@ -1,0 +1,152 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  latitude: 37.5828789
+  longitude: -122.0018041
+  # C for Celcius, F for Fahrenheit
+  temperature_unit: C
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: UTC
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Discover some devices automatically
+discovery:
+
+# Enables the frontend
+frontend:
+
+# View all events in a logbook
+logbook:
+
+# Allows you to issue voice commands from the frontend
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# Checks for available updates
+updater:
+
+# Track the sun
+sun:
+
+automation: !include automation.yaml
+sensor: !include devices/sensors.yaml
+switch: !include devices/switches.yaml
+binary_sensor: !include devices/binary_sensors.yaml
+light: !include devices/lights.yaml
+logger: !include logger.yaml
+script: !include scripts.yaml
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 10.0.0.1/24
+    home_interval: 600
+    # If new discovered devices are tracked by default (default: yes)
+    track_new_devices: yes
+    # Seconds between each scan for new devices (default: 12)
+    interval_seconds: 120
+    # Seconds to wait till marking someone as not home after not being seen
+    # (default: 180)
+    consider_home: 600
+  - platform: tomato
+    host: 10.0.0.1
+    username: admin
+    password: password_removed
+    http_id: token_removed
+  - platform: ddwrt
+    host: 10.0.0.27
+    username: root
+    password: password_removed
+  - platform: owntracks
+    max_gps_accuracy: 200
+
+camera:
+  - platform: generic
+    still_image_url: http://admin:password_removed@10.0.0.28/ISAPI/Streaming/channels/100/picture
+#    still_image_url: http://pc/kamerki/kam.php?i=01
+    name: door
+  - platform: generic
+    still_image_url: http://admin:password_removed@10.0.0.28/ISAPI/Streaming/channels/1600/picture
+#    still_image_url: http://pc/kamerki/kam.php?i=16
+    name: kids
+  - platform: generic
+    still_image_url: http://admin:password_removed@10.0.0.28/ISAPI/Streaming/channels/600/picture
+#    still_image_url: http://pc/kamerki/kam.php?i=06
+    name: driveway
+  - platform: generic
+    still_image_url: http://admin:password_removed@10.0.0.28/ISAPI/Streaming/channels/400/picture
+#    still_image_url: http://pc/kamerki/kam.php?i=04
+    name: front right
+  - platform: generic
+    still_image_url: http://admin:password_removed@10.0.0.28/ISAPI/Streaming/channels/200/picture
+#    still_image_url: http://pc/kamerki/kam.php?i=02
+    name: backyard
+#  - platform: generic
+#    still_image_url: http://admin:password_removed@10.0.0.28/ISAPI/Streaming/channels/300/picture
+#    name: ptz
+
+notify:
+  - platform: pushbullet
+    api_key: api_removed
+    name: pushbullet
+  - platform: file
+    name: plik
+    filename: /root/.homeassistant/notify.log
+    timestamp: 1
+
+media_player:
+  - platform: kodi
+    host: http://10.0.0.20
+    port: 8080
+    name: Kodi
+    #  user: 
+    #  password:
+  - platform: squeezebox
+    host: 10.0.0.11
+    port: 9090
+#  - platform: firetv
+#    host: localhost:5556
+#    device: firetv
+#    name: Fire TV
+  - platform: cast
+    host: Chromecast
+  - platform: plex
+
+graphite:
+  host: 10.0.0.11
+  port: 2003
+  prefix: ha
+
+nest:
+ username: email_removed
+ password: password_removed
+
+thermostat:
+  platform: nest
+
+ifttt:
+  key: key_removed
+
+# Will show all available sensors:
+
+
+mqtt:
+  broker: 10.0.0.11
+  port: 11883
+  username: smartthings
+  password: smartth1ngs
+
+#mqtt 2:
+#  broker: 10.0.0.11
+#  port: 11883
+
+
+shell_command:
+ take_photo_gate: /root/.homeassistant/bin/take_photo_gate.sh
+ take_photo_door: /root/.homeassistant/bin/take_photo_door.sh
+ start_music: /root/.homeassistant/bin/music.php play
+ stop_music: /root/.homeassistant/bin/music.php stop
+ start_kodi: /root/.homeassistant/bin/start_kodi.sh

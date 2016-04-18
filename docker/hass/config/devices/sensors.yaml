@@ -1,0 +1,145 @@
+- platform: forecast
+  api_key: 877dcfafcd01cd586970554b62ef594d
+  scan_interval: 600
+  minute: 30
+  monitored_conditions:
+    - summary
+    - icon
+    - nearest_storm_distance
+    - nearest_storm_bearing
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+    - ozone
+- platform: speedtest
+  minute: 30
+  hour:
+    - 0
+    - 6
+    - 12
+    - 18
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+- platform: command_line
+  command: /tmp/pge.sh homeautomation
+  name: PGE Energy
+  unit_of_measurement: 'W'
+- platform: time_date
+  display_options:
+      - 'time'
+      - 'date'
+- platform: worldclock
+  time_zone: Europe/Warsaw
+  name: 'Warszawa'
+
+- platform: mqtt
+  name: power - Entrance
+  state_topic: "/smartthings/Entrance/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: power - My Aeon Home Energy Monitor v3
+  state_topic: "/smartthings/My Aeon Home Energy Monitor v3/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: power - Outdoor Music
+  state_topic: "/smartthings/Outdoor Music/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: power - Solar
+  state_topic: "/smartthings/Solar/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: power - Switch Sonos
+  state_topic: "/smartthings/Switch Sonos/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: power - Water
+  state_topic: "/smartthings/Water/power"
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: energy - Entrance
+  state_topic: "/smartthings/Entrance/energy"
+  unit_of_measurement: "kW"
+- platform: mqtt
+  name: energy - Gate
+  state_topic: "/smartthings/Gate/energy"
+  unit_of_measurement: "kW"
+- platform: mqtt
+  name: energy - My Aeon Home Energy Monitor v3
+  state_topic: "/smartthings/My Aeon Home Energy Monitor v3/energy"
+  unit_of_measurement: "kW"
+- platform: mqtt
+  name: energy - Outdoor Music
+  state_topic: "/smartthings/Outdoor Music/energy"
+  unit_of_measurement: "kW"
+- platform: mqtt
+  name: energy - Switch Sonos
+  state_topic: "/smartthings/Switch Sonos/energy"
+  unit_of_measurement: "kW"
+- platform: mqtt
+  name: energy - Water
+  state_topic: "/smartthings/Water/energy"
+  unit_of_measurement: "kW"
+- platform: mqtt
+  name: battery - Brama
+  state_topic: "/smartthings/Brama/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: battery - Deck
+  state_topic: "/smartthings/Deck/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: battery - Garage Door
+  state_topic: "/smartthings/Garage Door/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: battery - Garage Lock
+  state_topic: "/smartthings/Garage Lock/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: battery - Garage Sensor
+  state_topic: "/smartthings/Garage Sensor/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: battery - Z-Wave Smoke Alarm 1
+  state_topic: "/smartthings/Z-Wave Smoke Alarm 1/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: battery - Z-Wave Smoke Alarm 2
+  state_topic: "/smartthings/Z-Wave Smoke Alarm 2/battery"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: level - Bedroom
+  state_topic: "/smartthings/Bedroom/level"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: level - Dining Room
+  state_topic: "/smartthings/Dining Room/level"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: level - Family Room
+  state_topic: "/smartthings/Family Room/level"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: level - Lampa
+  state_topic: "/smartthings/Lampa/level"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: level - LIFX Lampa Dolna
+  state_topic: "/smartthings/LIFX Lampa Dolna/level"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: level - LIFX Lampa Gorna
+  state_topic: "/smartthings/LIFX Lampa Gorna/level"
+  unit_of_measurement: "%"

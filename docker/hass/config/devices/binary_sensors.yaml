@@ -1,0 +1,67 @@
+- platform: mqtt
+  name: "contact - Brama"
+  state_topic: "/smartthings/Brama/contact"
+  command_topic: "/smartthings/Brama/contact"
+  retain: true
+  payload_on: "open"
+  payload_off: "closed"
+- platform: mqtt
+  name: "contact - Garage Door"
+  state_topic: "/smartthings/Garage Door/contact"
+  command_topic: "/smartthings/Garage Door/contact"
+  retain: true
+  payload_on: "open"
+  payload_off: "closed"
+- platform: mqtt
+  name: "contact - Gate"
+  state_topic: "/smartthings/Gate/contact"
+  command_topic: "/smartthings/Gate/contact"
+  retain: true
+  payload_on: "open"
+  payload_off: "closed"
+- platform: mqtt
+  name: "motion - Bathroom"
+  state_topic: "/smartthings/Bathroom/motion"
+  command_topic: "/smartthings/Bathroom/motion"
+  retain: true
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "motion - Deck"
+  state_topic: "/smartthings/Deck/motion"
+  command_topic: "/smartthings/Deck/motion"
+  retain: true
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "motion - Garage Sensor"
+  state_topic: "/smartthings/Garage Sensor/motion"
+  command_topic: "/smartthings/Garage Sensor/motion"
+  retain: true
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: "motion - Porch"
+  state_topic: "/smartthings/Porch/motion"
+  command_topic: "/smartthings/Porch/motion"
+  retain: true
+  payload_on: "active"
+  payload_off: "inactive"
+- platform: mqtt
+  name: lock - Garage Lock
+  state_topic: "/smartthings/Garage Lock/lock"
+- platform: mqtt
+  name: presence - Grzegorz's Android
+  state_topic: "/smartthings/Grzegorz's Android/presence"
+- platform: mqtt
+  name: presence - TV presence
+  state_topic: "/smartthings/TV presence/presence"
+- platform: mqtt
+  name: button - Minimote
+  state_topic: "/smartthings/Minimote/button"
+- platform: mqtt
+  name: acceleration - Brama
+  state_topic: "/smartthings/Brama/acceleration"
+- platform: mqtt
+  name: acceleration - Garage Door
+  state_topic: "/smartthings/Garage Door/acceleration"

@@ -1,0 +1,5 @@
+#bedroom_timer: !include scripts/bedroom_timer.yaml
+water_timer: !include scripts/water_timer.yaml
+gate_timer: !include scripts/gate_timer.yaml
+sonos_timed: !include scripts/sonos_timed.yaml
+sonos_timer_off: !include scripts/sonos_timer_off.yaml

@@ -1,0 +1,94 @@
+
+- platform: lifx
+  server: 10.0.0.11
+  broadcast: 10.0.0.255
+
+- platform: mqtt
+  name: "Bedroom"
+  state_topic: "/smartthings/Bedroom/switch"
+  command_topic: "/smartthings/Bedroom/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+  brightness_state_topic: "/smartthings/Bedroom/level"
+  brightness_command_topic: "/smartthings/Bedroom/level"
+- platform: mqtt
+  name: "Deck"
+  state_topic: "/smartthings/Deck/switch"
+  command_topic: "/smartthings/Deck/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Dining Room"
+  state_topic: "/smartthings/Dining Room/switch"
+  command_topic: "/smartthings/Dining Room/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+  brightness_state_topic: "/smartthings/Dining Room/level"
+  brightness_command_topic: "/smartthings/Dining Room/level"
+- platform: mqtt
+  name: "Entrance"
+  state_topic: "/smartthings/Entrance/switch"
+  command_topic: "/smartthings/Entrance/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Family Room"
+  state_topic: "/smartthings/Family Room/switch"
+  command_topic: "/smartthings/Family Room/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+  brightness_state_topic: "/smartthings/Family Room/level"
+  brightness_command_topic: "/smartthings/Family Room/level"
+- platform: mqtt
+  name: "Lampa"
+  state_topic: "/smartthings/Lampa/switch"
+  command_topic: "/smartthings/Lampa/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+  brightness_state_topic: "/smartthings/Lampa/level"
+  brightness_command_topic: "/smartthings/Lampa/level"
+- platform: mqtt
+  name: "LIFX Lampa Dolna"
+  state_topic: "/smartthings/LIFX Lampa Dolna/switch"
+  command_topic: "/smartthings/LIFX Lampa Dolna/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+  brightness_state_topic: "/smartthings/LIFX Lampa Dolna/level"
+  brightness_command_topic: "/smartthings/LIFX Lampa Dolna/level"
+- platform: mqtt
+  name: "LIFX Lampa Gorna"
+  state_topic: "/smartthings/LIFX Lampa Gorna/switch"
+  command_topic: "/smartthings/LIFX Lampa Gorna/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+  brightness_state_topic: "/smartthings/LIFX Lampa Gorna/level"
+  brightness_command_topic: "/smartthings/LIFX Lampa Gorna/level"
+- platform: mqtt
+  name: "Outdoor Garage"
+  state_topic: "/smartthings/Outdoor Garage/switch"
+  command_topic: "/smartthings/Outdoor Garage/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Outdoor Sheshed"
+  state_topic: "/smartthings/Outdoor Sheshed/switch"
+  command_topic: "/smartthings/Outdoor Sheshed/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Porch"
+  state_topic: "/smartthings/Porch/switch"
+  command_topic: "/smartthings/Porch/switch"
+  retain: true
+  payload_on: "on"
+  payload_off: "off"
